@@ -9,7 +9,11 @@ const router = new Router();
 app.use(koaBody());
 
 router.get("/", async ctx => {
-  ctx.body = JSON.stringify({success:true});
+  ctx.body = {success:true, key:"1234"};
+});
+
+router.post("/verify",async ctx => {
+  ctx.body = JSON.stringify({success:true, key:"1234"});
 });
 
 app
